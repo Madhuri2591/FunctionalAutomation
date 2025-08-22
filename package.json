@@ -1,0 +1,27 @@
+{
+  "name": "automation1",
+  "version": "1.0.0",
+  "main": "index.js",
+ "scripts": {
+  "test": "cucumber-js --config cucumber.js",
+  "clean:allure": "npx rimraf allure-results allure-report",
+  "generate:allure": "allure generate allure-results --clean",
+  "open:allure": "allure open allure-report",
+  "report": "npm run generate:allure && npm run open:allure"
+},
+
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@cucumber/cucumber": "^12.1.0",
+    "@playwright/test": "^1.54.2",
+    "@types/node": "^24.3.0",
+    "allure-commandline": "^2.34.1",
+    "allure-cucumberjs": "^3.3.3",
+    "playwright": "^1.54.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  }
+}

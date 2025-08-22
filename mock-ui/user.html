@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head><title>User Details</title></head>
+<body>
+  <h1>User Info</h1>
+  <div id="user-info"></div>
+
+  <script>
+    fetch('/users/data') // ✅ Changed to relative path for local interception
+      .then(res => res.json())
+      .then(data => {
+        const maskedPhone = '******' + data.phone.slice(-4);
+        document.getElementById('user-info').innerHTML = `
+          <p id="user-name">Name: ${data.name}</p>
+          <p id="user-email">Email: ${data.email}</p>
+          <p id="user-username">Username: ${data.username}</p>
+          <p id="user-phone">Phone: ${maskedPhone}</p>
+        `;
+      })
+      .catch(error => {
+        document.getElementById('user-info').innerHTML = `<p style='color:red;'>Failed to load user info.</p>`;
+        console.error('API fetch error:', error);
+      });
+  </script>
+</body>
+</html>
