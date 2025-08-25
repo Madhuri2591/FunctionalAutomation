@@ -22,6 +22,9 @@ jobs:
       - name: 📦 Install dependencies
         run: npm install
 
+      - name: 🔓 Fix cucumber-js permissions
+        run: chmod +x node_modules/.bin/cucumber-js
+
       - name: 🧪 Run tests
         run: npx cucumber-js --config cucumber.js --tags "@ui"
 
