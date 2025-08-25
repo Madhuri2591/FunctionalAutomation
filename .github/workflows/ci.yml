@@ -29,9 +29,30 @@ jobs:
       - name: 🧪 Run tests
         run: npx cucumber-js --config cucumber.js --tags "@ui"
 
-
       - name: 📤 Upload Allure results
         uses: actions/upload-artifact@v4.3.1
         with:
           name: allure-results
           path: allure-results/
+
+      - name: 📧 Send email notification
+        if: success()
+        uses: dawidd6/action-send-mail@v4
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: "✅ Workflow Passed: ${{ github.workflow }}"
+          to: madhuri.dumane@example.com
+          from: "CI Bot <ci@example.com>"
+          body: |
+            Hello Madhuri,
+
+            The GitHub Actions workflow '${{ github.workflow }}' for '${{ github.repository }}' has completed successfully.
+
+            You can view the results and artifacts in the Actions tab.
+
+            Regards,
+            CI Bot
