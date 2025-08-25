@@ -1,0 +1,30 @@
+# Ignore Allure results and reports
+allure-results/
+allure-report/
+
+# Ignore npm logs and debug files
+npm-debug.log*
+
+# Ignore node_modules (if present)
+node_modules/
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore environment files
+.env
+
+# Ignore VS Code settings
+.vscode/
+
+# Ignore coverage reports
+coverage/
+
+# Ignore other common build artifacts
+dist/
+build/
+
+# Ignore mock-ui and reports folders (if they are generated)
+mock-ui/
+reports/

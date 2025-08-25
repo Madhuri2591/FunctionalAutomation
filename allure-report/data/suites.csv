@@ -1,3 +1,4 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","3915","Successful login with valid credentials","","Thu Aug 21 16:23:43 IST 2025","passed","Thu Aug 21 16:23:47 IST 2025","","","",""
-"","3473","Get request to public API","","Thu Aug 21 16:25:53 IST 2025","passed","Thu Aug 21 16:25:57 IST 2025","","","",""
+"","3096","Validate mocked API response and UI rendering","","Mon Aug 25 10:45:48 IST 2025","passed","Mon Aug 25 10:45:51 IST 2025","","","",""
+"","3870","Successful login with valid credentials","","Mon Aug 25 10:54:52 IST 2025","passed","Mon Aug 25 10:54:56 IST 2025","","","",""
+"","3111","Get request to public API","","Mon Aug 25 10:45:41 IST 2025","passed","Mon Aug 25 10:45:44 IST 2025","","","",""

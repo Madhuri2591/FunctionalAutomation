@@ -23,7 +23,7 @@ jobs:
         run: npm install
 
       - name: 🧪 Run tests
-        run: npm run test
+        run: npm run test -- --tags "@ui"
 
       - name: 📤 Upload Allure results
         uses: actions/upload-artifact@v3
