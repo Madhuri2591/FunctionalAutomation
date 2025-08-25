@@ -23,7 +23,8 @@ jobs:
         run: npm install
 
       - name: 🧪 Run tests
-        run: npm run test -- --tags "@ui"
+        run: npx cucumber-js --config cucumber.js --tags "@ui"
+
 
       - name: 📤 Upload Allure results
         uses: actions/upload-artifact@v4.3.1
